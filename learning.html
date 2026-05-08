@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>GoldenFields — Learning Hub</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand" onclick="location.href='index.html'">
+        <img id="logo-img" src="assets/logo-light.svg" alt="GoldenFields" class="logo-img"/>
+        <h1 data-i18n="brand.name">GoldenFields</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="marketplace.html" data-i18n="nav.marketplace">Marketplace</a>
+        <a href="community.html" data-i18n="nav.community">Community</a>
+        <a href="learning.html" class="active" data-i18n="nav.learning">Learning Hub</a>
+        <a href="mandi.html" data-i18n="nav.mandi">Mandi Locator</a>
+        <a href="auth.html" data-i18n="nav.signin" style="background:transparent;border:1px solid rgba(16,24,32,0.06);padding:8px 12px;border-radius:8px;color:var(--primary)">Sign in</a>
+      </nav>
+      <div class="header-controls">
+        <label class="theme-switch" title="Toggle theme">
+          <input id="theme-toggle" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+        <select id="lang-select" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="od">ଓଡ଼ିଆ</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:20px">
+        <h1 style="font-size:28px;margin-bottom:6px" data-i18n="learning.title">Learning Hub</h1>
+        <p style="color:var(--muted)" data-i18n="learning.lead">Knowledge is the best fertilizer. Explore our library of farming techniques and expert advice.</p>
+      </div>
+
+      <div id="learning-grid" class="grid grid-3"></div>
+    </div>
+  </main>
+
+  <footer class="footer" style="margin-top:40px">
+    <div class="container footer-grid">
+      <div>
+        <div style="display:flex;gap:10px;align-items:center"><img class="logo-img" src="assets/logo-light.svg" style="width:40px;height:40px;border-radius:8px"/><strong data-i18n="footer.name">GoldenFields</strong></div>
+        <p style="color:var(--muted);margin-top:10px" data-i18n="footer.about">Learning resources.</p>
+      </div>
+      <div><h4 data-i18n="footer.platform">Platform</h4><div style="color:var(--muted)"><a href="marketplace.html" data-i18n="nav.marketplace">Marketplace</a><br/><a href="community.html" data-i18n="nav.community">Community</a></div></div>
+      <div><h4 data-i18n="footer.support">Support</h4><div style="color:var(--muted)"><a href="#">Help</a></div></div>
+      <div><h4 data-i18n="footer.legal">Legal</h4><div style="color:var(--muted)"><a href="#">TOS</a></div></div>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chat-btn" class="chat-btn">💬</button>
+  <div id="chat-window" class="chat-window" style="display:none">
+    <div class="chat-header">
+      <div style="display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1542293787938-c9e299b8808b?auto=format&fit=crop&w=120&q=80" style="width:36px;height:36px;border-radius:8px"/><strong>Arnak AI</strong></div>
+      <div style="display:flex;gap:8px;align-items:center"><button id="chat-close" style="background:transparent;border:0;color:white;font-size:20px;cursor:pointer">✕</button></div>
+    </div>
+    <div id="chat-body" class="chat-body"></div>
+    <div class="chat-input">
+      <input id="chat-input" placeholder="Ask about crops..." />
+      <button id="chat-send" class="btn btn-primary">Send</button>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/theme-lang.js"></script>
+</body>
+</html>
